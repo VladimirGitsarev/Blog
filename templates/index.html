@@ -1,0 +1,186 @@
+<!doctype html>
+{% load static %}
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}" />
+    <title>VOV Blog</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">VOV Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse menu" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="#" class="nav-link">Articles</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="#" class="nav-link">Become an author</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="carousel slide" data-ride="carousel" id="slide">
+      <ul class="carousel-indicators">
+        <li data-target="#slide" data-slide-to="0" class="active"></li>
+        <li data-target="#slide" data-slide-to="1"></li>
+        <li data-target="#slide" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://img1.akspic.com/image/104850-nature-formation-national_park-watercourse-tourist_attraction-2560x1440.jpg" alt="">
+          <div class="carousel-caption">
+            <h1 class="display-2">Programming</h1>
+            <h3>Learn programming right now!</h3>
+            <button type="button" class="btn btn-outline-light btn-lg">Learn more...</button>
+            <button type="button" class="btn btn-warning btn-lg">Watch demo...</button>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://stmed.net/sites/default/files/manhattan-bridge-wallpapers-28713-6320213.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="https://c.wallhere.com/photos/e7/46/landscape_nature-159249.jpg!d" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="text-center header">
+      <h2>Latest articles:</h2>
+      <hr>
+   </div>
+    <div class="container-fluid">
+      <div class="row jumbotron">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
+              <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
+            </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
+          <h3>What programming is?</h3>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quas porro. Vitae expedita asperiores atque quisquam voluptate nisi deserunt praesentium unde officia necessitatibus, vero similique architecto. Accusantium cum quasi voluptates odit ea maiores porro veritatis pariatur. Dicta expedita corporis veniam, sequi, a maxime ut architecto vitae iure eum sunt ipsam?..</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
+                <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
+              </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
+            <h3>Where to start learning?</h3>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, dolore mollitia. Corrupti cumque eius culpa. Provident alias architecto, ipsam vitae eveniet eos maxime incidunt sunt quibusdam reiciendis at voluptas explicabo rerum laudantium quam consequatur mollitia? Pariatur labore at quo aspernatur. Ut repudiandae aspernatur consequuntur modi nemo libero repellat iure quaerat...</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+              <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+          <div class="row jumbotron">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
+                  <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
+                </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
+              <h3>How to create a website?</h3>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ratione eveniet quaerat accusamus asperiores delectus beatae quidem optio assumenda officia sequi modi, laudantium repellat in odio incidunt nisi fugiat nobis dolorum similique minus corporis possimus amet alias. Rerum, mollitia laboriosam blanditiis sint culpa quisquam modi accusantium dicta, voluptatum, repellendus eaque...</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
+            </div>
+          </div>
+        </div>
+    <div class="container-fluid">
+       <div class="row text-center alert">
+         <div class="col-12">
+           <h1 class="display4">Topics</h1>
+           <hr>
+         </div>
+       </div>
+    </div>
+    <div class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4 bottom-block">
+          <i class="fa fa-align-left"></i>
+          <h3>Is Trump an alien?</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi praesentium quod nihil est itaque consequuntur enim neque pariatur commodi?</p>
+          <p class="topic">POLITICS</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 bottom-block">
+            <i class="fa fa-align-justify"></i>
+            <h3>How about that, Elon Musk</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi praesentium quod nihil est itaque consequuntur enim neque pariatur commodi?</p>
+            <p class="topic">TECHNOLOGIES</p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 bottom-block">
+              <i class="fa fa-align-right"></i>
+              <h3>Belarusian economy falls down</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi praesentium quod nihil est itaque consequuntur enim neque pariatur commodi?</p>
+              <p class="topic">FINANCE</p>
+            </div>
+      </div>
+      <hr class="my-4">
+    </div>
+    <div class="container-fluid padding">
+      <div class="row padding">
+        <div class="offset-lg-2 col-lg-4">
+          <h2>Learn programming now!</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Molestias aperiam nisi tempore non deleniti quasi, 
+            animi repellendus debitis autem illo ea necessitatibus consectetur veniam.
+            <br><br> 
+            Porro ad hic distinctio inventore, nobis nisi perferendis veniam officia possimus mollitia earum et?
+            Animi doloremque aliquid explicabo! 
+            Nobis nesciunt culpa ipsam dolores quidem unde veritatis!</p>
+            <br>
+            <a href="#" class="btn btn-danger">Read more...</a>
+        </div>
+        <div class="col-lg-4">
+          <br>
+          <img src="https://aqm.by/upload/dev2fun_opengraph/ed0/ed01b8b8c058152faa0f6928d68b88b8.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  <div class="text-center">
+      <button type="button" class="btn btn-success text-center open-photos" data-toggle="collapse" data-target="#gifs">
+          Open information
+        </button>
+  </div>
+  <div id="gifs" class="collapse">
+    <div class="container-fluid padding">
+      <div class="row text-center">
+        <div class="col-sm-6 col-md-3">
+          <img src="https://cdn.freelance.ru/img/portfolio/pics/00/2B/49/2836854.jpg?mt=b62f6380" alt="" class="gif img-fluid">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img src="https://c.pxhere.com/photos/a5/9f/code_coder_coding_computer_data_developer_developing_development-918274.jpg!d" alt="" class="gif img-fluid">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img src="https://techlaunch.io/blog/wp-content/uploads/2018/07/oskar-yildiz-631351-unsplash.jpg" alt="" class="gif img-fluid">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img src="https://aevrika.ru/media/f/2018/09/code-coding-computer-574071.jpg" alt="" class="gif img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
