@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <h2 class="display-4">{{art.title}}</h2>
+</div>
+<div class="container-fluid">
+    <div class="jumbotron">
+      <img class="img-fluid news-img art-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
+      <h3 class="art-header">{{art.title}}</h3>
+      <div class="art-info">
+        <p class="lead">Author: unknown</p>
+        <p class="lead">Date: {{art.date}}</p>
+      </div>
+      <div>
+        <p class="lead lead-art">{{art.text}}</p>
+      </div>
+      <hr>
+
+      <div>
+        <div style="display: flex;"> 
+          <img class="avatar" src="{% static 'img/profile-avatar-png-6.png' %}">
+          <p class="author-name">Vladimir Gitsarev</p>
+      </div>
+        <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa provident nihil repellat possimus. Maxime minima veritatis consequuntur, tenetur nulla eaque fuga recusandae nisi repellendus adipisci, quidem, officiis ipsum doloribus eligendi at. Tempore officiis perferendis distinctio a pariatur eligendi earum ab molestiae nemo repellat sit nulla minus dolor, veritatis accusantium.</p>
+      </div>
+      <div>
+          <div style="display: flex;"> 
+            <img class="avatar" src="{% static 'img/profile-avatar-png-6.png' %}">
+            <p class="author-name">Vladimir Gitsarev</p>
+        </div>
+          <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa provident nihil repellat possimus. Maxime minima veritatis consequuntur, tenetur nulla eaque fuga recusandae nisi repellendus adipisci, quidem, officiis ipsum doloribus eligendi at. Tempore officiis perferendis distinctio a pariatur eligendi earum ab molestiae nemo repellat sit nulla minus dolor, veritatis accusantium.</p>
+        </div>
+        <div>
+            <div style="display: flex;"> 
+              <img class="avatar" src="{% static 'img/profile-avatar-png-6.png' %}">
+              <p class="author-name">Vladimir Gitsarev</p>
+          </div>
+            <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa provident nihil repellat possimus. Maxime minima veritatis consequuntur, tenetur nulla eaque fuga recusandae nisi repellendus adipisci, quidem, officiis ipsum doloribus eligendi at. Tempore officiis perferendis distinctio a pariatur eligendi earum ab molestiae nemo repellat sit nulla minus dolor, veritatis accusantium.</p>
+          </div>
+    </div>
+   
+  </div>
+  
+{% endblock content%}

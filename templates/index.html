@@ -1,37 +1,6 @@
-<!doctype html>
-{% load static %}
-<html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}" />
-    <title>VOV Blog</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-      <div class="container">
-        <a href="#" class="navbar-brand">VOV Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse menu" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="#" class="nav-link">Articles</a></li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="#" class="nav-link">News</a></li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="#" class="nav-link">Become an author</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+{% extends "base.html" %}
+{% block content %}
     <div class="carousel slide" data-ride="carousel" id="slide">
       <ul class="carousel-indicators">
         <li data-target="#slide" data-slide-to="0" class="active"></li>
@@ -42,18 +11,35 @@
         <div class="carousel-item active">
           <img src="https://img1.akspic.com/image/104850-nature-formation-national_park-watercourse-tourist_attraction-2560x1440.jpg" alt="">
           <div class="carousel-caption">
-            <h1 class="display-2">Programming</h1>
-            <h3>Learn programming right now!</h3>
+            <h1 class="display-4">What's going on!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae dicta aspernatur ab amet. 
+              Quis optio aliquam qui itaque fugit expedita quos tempore ipsa laborum cumque illo maiores veniam, 
+              deserunt in laudantium veritatis at cum corporis perspiciatis similique sunt. 
+              Aliquid nesciunt temporibus mollitia consequatur optio quia ab nihil dolores rerum...</p>
             <button type="button" class="btn btn-outline-light btn-lg">Learn more...</button>
-            <button type="button" class="btn btn-warning btn-lg">Watch demo...</button>
-
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://stmed.net/sites/default/files/manhattan-bridge-wallpapers-28713-6320213.jpg" alt="">
+          <div class="carousel-caption">
+              <h1 class="display-4">For all mankind!</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, veniam voluptate, 
+                at ipsam placeat fugit sint eaque autem, nulla fugiat alias! Fugit blanditiis, 
+                adipisci explicabo vel assumenda commodi! Ducimus, molestiae atque tempora vero commodi sit repellat. 
+                deserunt amet ipsam harum possimus voluptatem! Quidem illum quam ea excepturi autem!</p>
+                <button type="button" class="btn btn-outline-light btn-lg">Learn more...</button>
+            </div>
         </div>
         <div class="carousel-item">
           <img src="https://c.wallhere.com/photos/e7/46/landscape_nature-159249.jpg!d" alt="">
+          <div class="carousel-caption">
+              <h1 class="display-4">This is the way!</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, aliquam. 
+                Qui molestiae nulla accusamus dolor obcaecati ratione consequuntur natus sapiente voluptatem voluptatibus repellat, 
+                beatae, magnam voluptas quidem consectetur illum optio blanditiis sunt possimus saepe eius. 
+                Autem quo omnis quae earum. Ab consequatur ipsam eum. Dolore laboriosam eius sequi quisquam harum.</p>
+                <button type="button" class="btn btn-outline-light btn-lg">Learn more...</button>
+            </div>
         </div>
       </div>
     </div>
@@ -61,48 +47,23 @@
       <h2>Latest articles:</h2>
       <hr>
    </div>
+   {% for art in articles %}
     <div class="container-fluid">
       <div class="row jumbotron">
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
               <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
             </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
-          <h3>What programming is?</h3>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quas porro. Vitae expedita asperiores atque quisquam voluptate nisi deserunt praesentium unde officia necessitatibus, vero similique architecto. Accusantium cum quasi voluptates odit ea maiores porro veritatis pariatur. Dicta expedita corporis veniam, sequi, a maxime ut architecto vitae iure eum sunt ipsam?..</p>
+          <h3>{{art.title}}</h3>
+          <p class="lead">{{art.text}}</p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-            <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
+            <a href="{% url 'articles' art.id  %}"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-        <div class="row jumbotron">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
-                <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
-              </div>
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
-            <h3>Where to start learning?</h3>
-            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, dolore mollitia. Corrupti cumque eius culpa. Provident alias architecto, ipsam vitae eveniet eos maxime incidunt sunt quibusdam reiciendis at voluptas explicabo rerum laudantium quam consequatur mollitia? Pariatur labore at quo aspernatur. Ut repudiandae aspernatur consequuntur modi nemo libero repellat iure quaerat...</p>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-              <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-          <div class="row jumbotron">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-2">
-                  <img class="img-fluid news-img" src="https://ic.pics.livejournal.com/denilkhanov/42597978/258070/258070_900.jpg" alt="">
-                </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
-              <h3>How to create a website?</h3>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ratione eveniet quaerat accusamus asperiores delectus beatae quidem optio assumenda officia sequi modi, laudantium repellat in odio incidunt nisi fugiat nobis dolorum similique minus corporis possimus amet alias. Rerum, mollitia laboriosam blanditiis sint culpa quisquam modi accusantium dicta, voluptatum, repellendus eaque...</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                <a href="#"><button class="btn btn-success btn-lg content-center"> Read more...</button></a>
-            </div>
-          </div>
-        </div>
+    {% endfor %}
+    
     <div class="container-fluid">
        <div class="row text-center alert">
          <div class="col-12">
@@ -177,10 +138,4 @@
       </div>
     </div>
   </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+  {% endblock content %}
